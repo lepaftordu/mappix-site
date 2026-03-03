@@ -14,5 +14,6 @@
         <a href="index.php?page=contact">Contact</a>
         <a href="index.php?page=faq">FAQ</a>
         <a href="index.php?page=services">Services</a>
+        <a href="index.php?page=about">A propos</a>
     </nav>
 </header>
