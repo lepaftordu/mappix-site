@@ -1,21 +1,16 @@
 <?php
 $page = $_GET['page'] ?? 'home';
-$title = strtoupper($page);
+$title = strtoupper($page); 
 
 include __DIR__ . '/includes/header.php';
 
-$allowed = ['home', 'contact'];
+$allowed = ['about', 'contact', 'faq', 'home', 'services'];
 
-if (in_array($page, $allowed)) {
-    $file = __DIR__ . '/pages/' . $page . '.php';
+if (!in_array($page, $allowed)) {
+    echo "<h2>404 - Page introuvable</h2>";
 } else {
-    $file = null;
-}
-
-if ($file && file_exists($file)) {
-    include($file);
-} else {
-    echo "Page introuvable";
+    include __DIR__ . "/pages/$page.php";
 }
 
 include __DIR__ . '/includes/footer.php';
+?>
