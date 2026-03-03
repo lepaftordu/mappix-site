@@ -1,0 +1,15 @@
+<h2>Contact</h2>
+
+<form method="post">
+    <label>Nom</label>
+    <input name="nom" required>
+    <label>Message</label>
+    <textarea name="message" required></textarea>
+    <button type="submit">Envoyer</button>
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"]==="POST") {
+    echo"<p>Merci".htmlspecialchars($_POST["nom"]) ;
+}
+?>  SGRDGSR
