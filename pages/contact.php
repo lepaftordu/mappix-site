@@ -6,6 +6,9 @@
     <label>Message</label>
     <textarea name="message" required></textarea>
     <button type="submit">Envoyer</button>
+    <input type="text" placeholder="Votre nom">
+    <input type="email" placeholder="Votre email">
+    <button type="submit">Envoyer</button>
 </form>
 
 <?php

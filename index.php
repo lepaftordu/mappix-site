@@ -6,12 +6,16 @@ include __DIR__ . '/includes/header.php';
 
 $allowed = ['home', 'contact'];
 
-$file = __DIR__ . '/page/home.php';
+if (in_array($page, $allowed)) {
+    $file = __DIR__ . '/pages/' . $page . '.php';
+} else {
+    $file = null;
+}
 
-if (file_exists($file)) {
+if ($file && file_exists($file)) {
     include($file);
 } else {
     echo "Page introuvable";
 }
 
-include __DIR__. '/includes/footer.php';
+include __DIR__ . '/includes/footer.php';
